@@ -44,3 +44,12 @@
 /home/harish/MinimalAPI/TodoApi/obj/Debug/net8.0/TodoApi.csproj.AssemblyReference.cache
 /home/harish/MinimalAPI/TodoApi/obj/Debug/net8.0/TodoApi.MvcApplicationPartsAssemblyInfo.cs
 /home/harish/MinimalAPI/TodoApi/obj/Debug/net8.0/TodoApi.csproj.Up2Date
+/home/harish/MinimalAPI/TodoApi/obj/Debug/net8.0/TodoApi.sourcelink.json
+/home/harish/MinimalAPI/TodoApi/bin/Debug/net8.0/Microsoft.AspNetCore.Authentication.JwtBearer.dll
+/home/harish/MinimalAPI/TodoApi/bin/Debug/net8.0/Microsoft.IdentityModel.Abstractions.dll
+/home/harish/MinimalAPI/TodoApi/bin/Debug/net8.0/Microsoft.IdentityModel.JsonWebTokens.dll
+/home/harish/MinimalAPI/TodoApi/bin/Debug/net8.0/Microsoft.IdentityModel.Logging.dll
+/home/harish/MinimalAPI/TodoApi/bin/Debug/net8.0/Microsoft.IdentityModel.Protocols.dll
+/home/harish/MinimalAPI/TodoApi/bin/Debug/net8.0/Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+/home/harish/MinimalAPI/TodoApi/bin/Debug/net8.0/Microsoft.IdentityModel.Tokens.dll
+/home/harish/MinimalAPI/TodoApi/bin/Debug/net8.0/System.IdentityModel.Tokens.Jwt.dll

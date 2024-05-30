@@ -13,3 +13,18 @@ TypedResults helpers return strongly typed objects, which can improve code reada
 and reduce the chance of runtime errors.
 The implementation type automatically provides the response type metadata for OpenAPI to describe 
 the endpoint.
+
+Prevent over-posting:
+Currently the sample app exposes the entire Todo object. Production apps In production applications, 
+a subset of the model is often used to restrict the data that can be input and returned.
+ There are multiple reasons behind this and security is a major one. The subset of a model is usually 
+ referred to as a Data Transfer Object (DTO), input model, or view model. DTO is used in this article.
+
+A DTO can be used to:
+
+Prevent over-posting.
+Hide properties that clients aren't supposed to view.
+Omit some properties to reduce payload size.
+Flatten object graphs that contain nested objects. Flattened object graphs can be more convenient for clients.
+
+JSON Serialization: By default minimal API Serialize and deserialize in JSON format

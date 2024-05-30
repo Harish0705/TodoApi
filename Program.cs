@@ -1,9 +1,13 @@
 using NSwag.AspNetCore;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.AspNetCore.Authentication.JwtBearer;
 
-var builder = WebApplication.CreateBuilder(args);
+var builder = WebApplication.CreateBuilder(args); //like express in node
 builder.Services.AddDbContext<TodoDb>(opt => opt.UseInMemoryDatabase("TodoList"));
 builder.Services.AddDatabaseDeveloperPageExceptionFilter();
+builder.Services.AddAuthentication()
+  .AddJwtBearer("Bearer");
+builder.Services.AddAuthorization();
 
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddOpenApiDocument(config =>
@@ -27,10 +31,13 @@ if (app.Environment.IsDevelopment())
     });
 }
 
+app.Urls.Add("http://localhost:5259");
+app.Urls.Add("http://localhost:5156");
+
 // var todoItems = app.MapGroup("/todoitems");
 RouteGroupBuilder todoItems = app.MapGroup("/todoitems");
 
-todoItems.MapGet("/", GetAllTodos);
+todoItems.MapGet("/", GetAllTodos).RequireAuthorization();
 todoItems.MapGet("/complete", GetCompleteTodos);
 todoItems.MapGet("/{id}", GetTodo);
 todoItems.MapPost("/", CreateTodo);
